@@ -684,3 +684,210 @@
         }
     }
 }
+
+## PARAMETERS
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "location": {
+            "value": "centralus"
+        },
+        "osDiskType": {
+            "value": "Premium_LRS"
+        },
+        "virtualNetworkId": {
+            "value": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/virtualNetworks/vnet-centralus"
+        },
+        "virtualNetworkName": {
+            "value": "vnet-centralus"
+        },
+        "networkSecurityGroups": {
+            "value": [
+                {
+                    "name": "basicNsgvnet-centralus-nic01",
+                    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/networkSecurityGroups/basicNsgvnet-centralus-nic01",
+                    "rules": [
+                        {
+                            "name": "HTTP",
+                            "properties": {
+                                "priority": 300,
+                                "protocol": "TCP",
+                                "access": "Allow",
+                                "direction": "Inbound",
+                                "sourceAddressPrefix": "*",
+                                "sourcePortRange": "*",
+                                "destinationAddressPrefix": "*",
+                                "destinationPortRange": "80"
+                            }
+                        },
+                        {
+                            "name": "HTTPS",
+                            "properties": {
+                                "priority": 320,
+                                "protocol": "TCP",
+                                "access": "Allow",
+                                "direction": "Inbound",
+                                "sourceAddressPrefix": "*",
+                                "sourcePortRange": "*",
+                                "destinationAddressPrefix": "*",
+                                "destinationPortRange": "443"
+                            }
+                        },
+                        {
+                            "name": "RDP",
+                            "properties": {
+                                "priority": 340,
+                                "protocol": "TCP",
+                                "access": "Allow",
+                                "direction": "Inbound",
+                                "sourceAddressPrefix": "*",
+                                "sourcePortRange": "*",
+                                "destinationAddressPrefix": "*",
+                                "destinationPortRange": "3389"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "networkInterfaceConfigurations": {
+            "value": [
+                {
+                    "name": "vnet-centralus-nic01",
+                    "primary": true,
+                    "subnetId": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/virtualNetworks/vnet-centralus/subnets/snet-centralus-1",
+                    "applicationGatewayBackendAddressPools": [],
+                    "loadBalancerBackendAddressPools": [
+                        {
+                            "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', parameters('loadBalancerName'), parameters('backendPoolName'))]"
+                        }
+                    ],
+                    "applicationSecurityGroups": [],
+                    "loadBalancerInboundNatPools": [],
+                    "enableAcceleratedNetworking": false,
+                    "nsgName": "basicNsgvnet-centralus-nic01",
+                    "nsgId": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/networkSecurityGroups/basicNsgvnet-centralus-nic01",
+                    "pipName": "publicIp-vnet-centralus-nic01"
+                }
+            ]
+        },
+        "backendPoolName": {
+            "value": "bepool"
+        },
+        "loadBalancerName": {
+            "value": "Titem"
+        },
+        "loadbalancingRuleFrontEndPort": {
+            "value": 80
+        },
+        "loadbalancingRuleBackendEndPort": {
+            "value": 80
+        },
+        "loadbalancingRuleProtocol": {
+            "value": "Tcp"
+        },
+        "inboundNATRuleFrontEndPortRangeStart": {
+            "value": 50000
+        },
+        "vmName": {
+            "value": "TitemiScaleSet"
+        },
+        "virtualMachineScaleSetName": {
+            "value": "TitemiScaleSet"
+        },
+        "instanceCount": {
+            "value": "1"
+        },
+        "instanceSize": {
+            "value": "Standard_B1s"
+        },
+        "platformFaultDomainCount": {
+            "value": "1"
+        },
+        "scaleInPolicy": {
+            "value": {
+                "rules": [
+                    "Default"
+                ],
+                "forceDeletion": false
+            }
+        },
+        "upgradePolicy": {
+            "value": "Manual"
+        },
+        "hibernationEnabled": {
+            "value": false
+        },
+        "adminUsername": {
+            "value": "Titem"
+        },
+        "adminPassword": {
+            "value": null
+        },
+        "patchMode": {
+            "value": "AutomaticByOS"
+        },
+        "enableHotpatching": {
+            "value": false
+        },
+        "securityType": {
+            "value": "TrustedLaunch"
+        },
+        "secureBoot": {
+            "value": true
+        },
+        "vTPM": {
+            "value": true
+        },
+        "vnetLocation": {
+            "value": "centralus"
+        },
+        "vnetExtendedLocation": {
+            "value": {}
+        },
+        "vnetVirtualNetworkName": {
+            "value": "vnet-centralus"
+        },
+        "vnetTagsByResource": {
+            "value": {}
+        },
+        "vnetProperties": {
+            "value": {
+                "subnets": [
+                    {
+                        "name": "snet-centralus-1",
+                        "properties": {
+                            "addressPrefixes": [
+                                "172.16.0.0/24"
+                            ]
+                        }
+                    }
+                ],
+                "addressSpace": {
+                    "addressPrefixes": [
+                        "172.16.0.0/16"
+                    ]
+                }
+            }
+        },
+        "vnetNatGatewaysWithNewPublicIpAddress": {
+            "value": []
+        },
+        "vnetNatGatewaysWithoutNewPublicIpAddress": {
+            "value": []
+        },
+        "vnetNatGatewayPublicIpAddressesNewNames": {
+            "value": []
+        },
+        "vnetNetworkSecurityGroupsNew": {
+            "value": []
+        },
+        "vnetResourceGroupName": {
+            "value": "DevOps"
+        },
+        "vnetDeploymentName": {
+            "value": "network-interface-associated-virtual-network-20241122201246"
+        }
+    }
+}
