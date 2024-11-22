@@ -1,0 +1,82 @@
+[
+  {
+    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122193146/operations/96113FD3C6F21324",
+    "operationId": "96113FD3C6F21324",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-11-22T18:53:05.0841395Z",
+      "duration": "PT1M25.5524088S",
+      "trackingId": "e9531916-48b0-42dc-a2c4-52ac9e0d6b7d",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Compute/virtualMachineScaleSets/Titemscaleset",
+        "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+        "resourceName": "Titemscaleset"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122193146/operations/B06409A29EACCD7A",
+    "operationId": "B06409A29EACCD7A",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-11-22T18:51:39.4630354Z",
+      "duration": "PT11.7570877S",
+      "trackingId": "859f0dee-6f00-495d-bb85-c3c7c43dde63",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/loadBalancers/TitemInternal",
+        "resourceType": "Microsoft.Network/loadBalancers",
+        "resourceName": "TitemInternal"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122193146/operations/4C14C23A5CBA7BDF",
+    "operationId": "4C14C23A5CBA7BDF",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-11-22T18:51:35.9903638Z",
+      "duration": "PT8.2844161S",
+      "trackingId": "9e8fdd29-72c7-4a65-a79e-d392673c2db5",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/network-interface-associated-virtual-network-20241122195117",
+        "resourceType": "Microsoft.Resources/deployments",
+        "resourceName": "network-interface-associated-virtual-network-20241122195117"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122193146/operations/387785DF0BE8C3AC",
+    "operationId": "387785DF0BE8C3AC",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-11-22T18:51:31.5456239Z",
+      "duration": "PT3.8396762S",
+      "trackingId": "70837180-e70f-49c8-9e84-e28f83e9d755",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/networkSecurityGroups/basicNsgvnet-centralus-nic01",
+        "resourceType": "Microsoft.Network/networkSecurityGroups",
+        "resourceName": "basicNsgvnet-centralus-nic01"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122193146/operations/08584693054010559793",
+    "operationId": "08584693054010559793",
+    "properties": {
+      "provisioningOperation": "EvaluateDeploymentOutput",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-11-22T18:53:05.2617732Z",
+      "duration": "PT1M25.7300425S",
+      "trackingId": "bcae759d-cff4-4124-a29a-b2fa90234e29",
+      "statusCode": "OK"
+    }
+  }
+]
