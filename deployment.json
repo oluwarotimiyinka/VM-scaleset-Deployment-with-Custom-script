@@ -1,0 +1,356 @@
+{
+  "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122201013",
+  "name": "CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122201013",
+  "type": "Microsoft.Resources/deployments",
+  "properties": {
+    "templateHash": "10319625717097429079",
+    "parameters": {
+      "location": {
+        "type": "String",
+        "value": "centralus"
+      },
+      "osDiskType": {
+        "type": "String",
+        "value": "Premium_LRS"
+      },
+      "virtualNetworkId": {
+        "type": "String",
+        "value": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/virtualNetworks/vnet-centralus"
+      },
+      "virtualNetworkName": {
+        "type": "String",
+        "value": "vnet-centralus"
+      },
+      "networkSecurityGroups": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "basicNsgvnet-centralus-nic01",
+            "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/networkSecurityGroups/basicNsgvnet-centralus-nic01",
+            "rules": [
+              {
+                "name": "HTTP",
+                "properties": {
+                  "priority": 300,
+                  "protocol": "TCP",
+                  "access": "Allow",
+                  "direction": "Inbound",
+                  "sourceAddressPrefix": "*",
+                  "sourcePortRange": "*",
+                  "destinationAddressPrefix": "*",
+                  "destinationPortRange": "80"
+                }
+              },
+              {
+                "name": "HTTPS",
+                "properties": {
+                  "priority": 320,
+                  "protocol": "TCP",
+                  "access": "Allow",
+                  "direction": "Inbound",
+                  "sourceAddressPrefix": "*",
+                  "sourcePortRange": "*",
+                  "destinationAddressPrefix": "*",
+                  "destinationPortRange": "443"
+                }
+              },
+              {
+                "name": "RDP",
+                "properties": {
+                  "priority": 340,
+                  "protocol": "TCP",
+                  "access": "Allow",
+                  "direction": "Inbound",
+                  "sourceAddressPrefix": "*",
+                  "sourcePortRange": "*",
+                  "destinationAddressPrefix": "*",
+                  "destinationPortRange": "3389"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      "networkInterfaceConfigurations": {
+        "type": "Array",
+        "value": [
+          {
+            "name": "vnet-centralus-nic01",
+            "primary": true,
+            "subnetId": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/virtualNetworks/vnet-centralus/subnets/snet-centralus-1",
+            "applicationGatewayBackendAddressPools": [],
+            "loadBalancerBackendAddressPools": [
+              {
+                "id": "[resourceId('Microsoft.Network/loadBalancers/backendAddressPools', parameters('loadBalancerName'), parameters('backendPoolName'))]"
+              }
+            ],
+            "applicationSecurityGroups": [],
+            "loadBalancerInboundNatPools": [],
+            "enableAcceleratedNetworking": false,
+            "nsgName": "basicNsgvnet-centralus-nic01",
+            "nsgId": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/networkSecurityGroups/basicNsgvnet-centralus-nic01",
+            "pipName": "publicIp-vnet-centralus-nic01"
+          }
+        ]
+      },
+      "backendPoolName": {
+        "type": "String",
+        "value": "bepool"
+      },
+      "loadBalancerName": {
+        "type": "String",
+        "value": "Titem"
+      },
+      "loadbalancingRuleFrontEndPort": {
+        "type": "Int",
+        "value": 80
+      },
+      "loadbalancingRuleBackendEndPort": {
+        "type": "Int",
+        "value": 80
+      },
+      "loadbalancingRuleProtocol": {
+        "type": "String",
+        "value": "Tcp"
+      },
+      "inboundNATRuleFrontEndPortRangeStart": {
+        "type": "Int",
+        "value": 50000
+      },
+      "vmName": {
+        "type": "String",
+        "value": "TitemiScaleSet"
+      },
+      "virtualMachineScaleSetName": {
+        "type": "String",
+        "value": "TitemiScaleSet"
+      },
+      "instanceCount": {
+        "type": "String",
+        "value": "1"
+      },
+      "instanceSize": {
+        "type": "String",
+        "value": "Standard_B1s"
+      },
+      "platformFaultDomainCount": {
+        "type": "String",
+        "value": "1"
+      },
+      "scaleInPolicy": {
+        "type": "Object",
+        "value": {
+          "rules": [
+            "Default"
+          ],
+          "forceDeletion": false
+        }
+      },
+      "upgradePolicy": {
+        "type": "String",
+        "value": "Manual"
+      },
+      "hibernationEnabled": {
+        "type": "Bool",
+        "value": false
+      },
+      "adminUsername": {
+        "type": "String",
+        "value": "Titem"
+      },
+      "adminPassword": {
+        "type": "SecureString"
+      },
+      "patchMode": {
+        "type": "String",
+        "value": "AutomaticByOS"
+      },
+      "enableHotpatching": {
+        "type": "Bool",
+        "value": false
+      },
+      "securityType": {
+        "type": "String",
+        "value": "TrustedLaunch"
+      },
+      "secureBoot": {
+        "type": "Bool",
+        "value": true
+      },
+      "vTPM": {
+        "type": "Bool",
+        "value": true
+      },
+      "vnetLocation": {
+        "type": "String",
+        "value": "centralus"
+      },
+      "vnetExtendedLocation": {
+        "type": "Object",
+        "value": {}
+      },
+      "vnetVirtualNetworkName": {
+        "type": "String",
+        "value": "vnet-centralus"
+      },
+      "vnetTagsByResource": {
+        "type": "Object",
+        "value": {}
+      },
+      "vnetProperties": {
+        "type": "Object",
+        "value": {
+          "subnets": [
+            {
+              "name": "snet-centralus-1",
+              "properties": {
+                "addressPrefixes": [
+                  "172.16.0.0/24"
+                ]
+              }
+            }
+          ],
+          "addressSpace": {
+            "addressPrefixes": [
+              "172.16.0.0/16"
+            ]
+          }
+        }
+      },
+      "vnetNatGatewaysWithNewPublicIpAddress": {
+        "type": "Array",
+        "value": []
+      },
+      "vnetNatGatewaysWithoutNewPublicIpAddress": {
+        "type": "Array",
+        "value": []
+      },
+      "vnetNatGatewayPublicIpAddressesNewNames": {
+        "type": "Array",
+        "value": []
+      },
+      "vnetNetworkSecurityGroupsNew": {
+        "type": "Array",
+        "value": []
+      },
+      "vnetResourceGroupName": {
+        "type": "String",
+        "value": "DevOps"
+      },
+      "vnetDeploymentName": {
+        "type": "String",
+        "value": "network-interface-associated-virtual-network-20241122201246"
+      }
+    },
+    "mode": "Incremental",
+    "debugSetting": {
+      "detailLevel": "None"
+    },
+    "provisioningState": "Succeeded",
+    "timestamp": "2024-11-22T19:14:31.9061976Z",
+    "duration": "PT1M38.7620198S",
+    "correlationId": "0f3e1d9d-1ccc-4cbb-8aba-ffc450b68543",
+    "providers": [
+      {
+        "namespace": "Microsoft.Network",
+        "resourceTypes": [
+          {
+            "resourceType": "loadBalancers",
+            "locations": [
+              "centralus"
+            ]
+          },
+          {
+            "resourceType": "networkSecurityGroups",
+            "locations": [
+              "centralus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.Compute",
+        "resourceTypes": [
+          {
+            "resourceType": "virtualMachineScaleSets",
+            "locations": [
+              "centralus"
+            ]
+          }
+        ]
+      },
+      {
+        "namespace": "Microsoft.Resources",
+        "resourceTypes": [
+          {
+            "resourceType": "deployments",
+            "locations": [
+              null
+            ]
+          }
+        ]
+      }
+    ],
+    "dependencies": [
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/network-interface-associated-virtual-network-20241122201246",
+            "resourceType": "Microsoft.Resources/deployments",
+            "resourceName": "network-interface-associated-virtual-network-20241122201246"
+          }
+        ],
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/loadBalancers/Titem",
+        "resourceType": "Microsoft.Network/loadBalancers",
+        "resourceName": "Titem"
+      },
+      {
+        "dependsOn": [
+          {
+            "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/networkSecurityGroups/basicNsgvnet-centralus-nic01",
+            "resourceType": "Microsoft.Network/networkSecurityGroups",
+            "resourceName": "basicNsgvnet-centralus-nic01"
+          },
+          {
+            "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/network-interface-associated-virtual-network-20241122201246",
+            "resourceType": "Microsoft.Resources/deployments",
+            "resourceName": "network-interface-associated-virtual-network-20241122201246"
+          },
+          {
+            "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/loadBalancers/Titem",
+            "resourceType": "Microsoft.Network/loadBalancers",
+            "resourceName": "Titem"
+          }
+        ],
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Compute/virtualMachineScaleSets/TitemiScaleSet",
+        "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+        "resourceName": "TitemiScaleSet"
+      }
+    ],
+    "outputs": {
+      "adminUsername": {
+        "type": "String",
+        "value": "Titem"
+      }
+    },
+    "outputResources": [
+      {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Compute/virtualMachineScaleSets/TitemiScaleSet"
+      },
+      {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/loadBalancers/Titem"
+      },
+      {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/networkSecurityGroups/basicNsgvnet-centralus-nic01"
+      },
+      {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/virtualNetworks/vnet-centralus"
+      }
+    ],
+    "validationLevel": "Template"
+  },
+  "tags": {
+    "primaryResourceId": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourcegroups/DevOps/providers/Microsoft.Compute/virtualMachineScaleSets/TitemiScaleSet",
+    "marketplaceItemId": "microsoft.vmss"
+  }
+}

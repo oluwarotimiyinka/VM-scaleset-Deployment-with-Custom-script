@@ -1,0 +1,82 @@
+[
+  {
+    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122201013/operations/11DC492F84E4BA5F",
+    "operationId": "11DC492F84E4BA5F",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-11-22T19:14:31.6514845Z",
+      "duration": "PT1M26.716553S",
+      "trackingId": "739397a7-b5bb-4157-b686-fe073529fa56",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Compute/virtualMachineScaleSets/TitemiScaleSet",
+        "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
+        "resourceName": "TitemiScaleSet"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122201013/operations/8785413E2B46C792",
+    "operationId": "8785413E2B46C792",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-11-22T19:13:04.8572853Z",
+      "duration": "PT10.2015401S",
+      "trackingId": "d6c50401-2509-4622-a698-a926bd251081",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/loadBalancers/Titem",
+        "resourceType": "Microsoft.Network/loadBalancers",
+        "resourceName": "Titem"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122201013/operations/0AEB3EF7F9D0082E",
+    "operationId": "0AEB3EF7F9D0082E",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-11-22T19:13:01.276643Z",
+      "duration": "PT6.6208978S",
+      "trackingId": "0b831441-c06f-4383-b744-ac0eef423be3",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/network-interface-associated-virtual-network-20241122201246",
+        "resourceType": "Microsoft.Resources/deployments",
+        "resourceName": "network-interface-associated-virtual-network-20241122201246"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122201013/operations/387785DF0BE8C3AC",
+    "operationId": "387785DF0BE8C3AC",
+    "properties": {
+      "provisioningOperation": "Create",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-11-22T19:12:57.4710917Z",
+      "duration": "PT2.8153465S",
+      "trackingId": "7257611f-df68-469b-823e-6554bb3d415a",
+      "statusCode": "OK",
+      "targetResource": {
+        "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Network/networkSecurityGroups/basicNsgvnet-centralus-nic01",
+        "resourceType": "Microsoft.Network/networkSecurityGroups",
+        "resourceName": "basicNsgvnet-centralus-nic01"
+      }
+    }
+  },
+  {
+    "id": "/subscriptions/9f6fdc24-c117-4b85-a793-4e11d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122201013/operations/08584693041132820172",
+    "operationId": "08584693041132820172",
+    "properties": {
+      "provisioningOperation": "EvaluateDeploymentOutput",
+      "provisioningState": "Succeeded",
+      "timestamp": "2024-11-22T19:14:31.8411745Z",
+      "duration": "PT1M26.906243S",
+      "trackingId": "46636221-3b8a-492e-88ed-a16b587433b9",
+      "statusCode": "OK"
+    }
+  }
+]
