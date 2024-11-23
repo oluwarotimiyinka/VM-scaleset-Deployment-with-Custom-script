@@ -18,3 +18,9 @@ If you want to learn more about creating good readme files then refer the follow
 - [ASP.NET Core](https://github.com/aspnet/Home)
 - [Visual Studio Code](https://github.com/Microsoft/vscode)
 - [Chakra Core](https://github.com/Microsoft/ChakraCore)
+
+### CHALLENGE
+I found it's not enough for the app and account to be added as owners. I would go into your storage account > IAM > Add role assignment, and add the special permissions for this type of request:
+
+Storage Blob Data Contributor
+Storage Queue Data Contributor
