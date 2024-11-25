@@ -1,6 +1,6 @@
 [
   {
-    "id": "/subscriptions/9f6fdc24-c117-411d73abc63/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122201013/operations/id",
+    "id": "/subscriptions/id/resourceGroups/DevOps/providers/Microsoft.Resources/deployments/CreateVmss-MicrosoftWindowsServer.WindowsServer-2-20241122201013/operations/id",
     "operationId": "id",
     "properties": {
       "provisioningOperation": "Create",
@@ -10,7 +10,7 @@
       "trackingId": "739397a7-b5bb-4157-b686-fe073529fa56",
       "statusCode": "OK",
       "targetResource": {
-        "id": "/subscriptions/9f6fdc24-c117-4b85-4ebc63/resourceGroups/DevOps/providers/Microsoft.Compute/virtualMachineScaleSets/TitemiScaleSet",
+        "id": "/subscriptions/9f63/resourceGroups/DevOps/providers/Microsoft.Compute/virtualMachineScaleSets/TitemiScaleSet",
         "resourceType": "Microsoft.Compute/virtualMachineScaleSets",
         "resourceName": "TitemiScaleSet"
       }
@@ -27,7 +27,7 @@
       "trackingId": "d6c50401-2509-4622-a698-a926bd251081",
       "statusCode": "OK",
       "targetResource": {
-        "id": "/subscriptions/9f6fdbc63/resourceGroups/DevOps/providers/Microsoft.Network/loadBalancers/Titem",
+        "id": "/subscriptions/9fc63/resourceGroups/DevOps/providers/Microsoft.Network/loadBalancers/Titem",
         "resourceType": "Microsoft.Network/loadBalancers",
         "resourceName": "Titem"
       }
